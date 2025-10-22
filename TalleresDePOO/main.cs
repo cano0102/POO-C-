@@ -17,9 +17,9 @@ namespace MiProyecto.App
             // Llamada a un método estático definido en otro archivo del mismo proyecto
             // Actividad es una clase static/internal en el namespace Ejercicios,
             // por lo que podemos llamar directamente a su método estático.
-            // Prestamo.MostrarPrestamo();
-            // Salario.MostrarSalario();
-            // Objetos.CrearPersona();
+            Prestamo.MostrarPrestamo();
+            Salario.MostrarSalario();
+            Objetos.CrearPersona();
 
 
 

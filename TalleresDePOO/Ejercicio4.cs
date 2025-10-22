@@ -35,21 +35,23 @@ namespace MiProyecto.App
             Console.WriteLine("Dame el nombre del libro :");
             string nombre = Console.ReadLine();
 
-            Console.WriteLine("Dame el nombre del libro :");
+            Console.WriteLine("Dame el editorial del libro :");
             string editorial = Console.ReadLine();
 
 
-            Console.WriteLine("Dame el nombre del libro :");
+            Console.WriteLine("Dame el autor del libro :");
             string autor = Console.ReadLine();
 
 
-            Console.WriteLine("Dame el nombre del libro :");
+            Console.WriteLine("Dame el anio del libro :");
             int anioPublicacion = int.Parse(Console.ReadLine());
 
 
             Libro CaracteristicasDelLibro = new Libro(nombre, editorial, autor, anioPublicacion);
 
             Libros.Add(CaracteristicasDelLibro);
+
+            Console.WriteLine("Libro agragado");
 
 
              

@@ -66,52 +66,87 @@ namespace MiProyecto.App
             //     }
 
             // }
-            Estudiante estudiante = new Estudiante("alvarez mocholo", 19);
-            ProgramaAcademico programa1 = new ProgramaAcademico(1, "Ingenieria de sistemas", 20, 0.18F);
-            ProgramaAcademico programa2 = new ProgramaAcademico(2, "Psicologia", 16, 0.12F);
-            ProgramaAcademico programa3 = new ProgramaAcademico(3, "Economia", 18, 0.10F);
-            ProgramaAcademico programa4 = new ProgramaAcademico(4, "Comuniacion social", 18, 0.05F);
-            ProgramaAcademico programa5 = new ProgramaAcademico(5, "Administracion de empresas", 20, 0.15F);
-            Universidad antioquia = new Universidad("universidad de antioquia", "calle88");
-            antioquia.Programas.Add(programa1);
-            antioquia.Programas.Add(programa2);
-            antioquia.Programas.Add(programa3);
-            antioquia.Programas.Add(programa4);
-            antioquia.Programas.Add(programa5);
-            bool continuar = true;
-            while (continuar)
-            {
-                Console.WriteLine("MENÚ DE UNIVERSIDAD \n1. Consultar informacion\n2. Matricular\n3. Salir");
-                int opcion = int.Parse(Console.ReadLine());
 
-                switch (opcion)
-                {
-
-                    case 1:
-                        antioquia.MostrarInfo();
-                        break;
-                    case 2:
-                        Console.WriteLine("Selecciona el id del programa que deseas matricularte");
-                        foreach (var programa in antioquia.Programas)
-                        {
-                            programa.MostrarInfo();
-                        }
-                        int programaMatricula = int.Parse(Console.ReadLine());
-                        antioquia.Matricular(estudiante, programaMatricula);
-                        break;
-                    case 3:
-                        Console.WriteLine("Saliendo del programa");
-                        continuar = false;
-                        break;
-
-                    default:
-                        Console.WriteLine("Opcion no validad");
-                        break;
+            //Ejercicio 5
 
 
-                }
+            // Estudiante estudiante = new Estudiante("alvarez mocholo", 19);
+            // ProgramaAcademico programa1 = new ProgramaAcademico(1, "Ingenieria de sistemas", 20, 0.18F);
+            // ProgramaAcademico programa2 = new ProgramaAcademico(2, "Psicologia", 16, 0.12F);
+            // ProgramaAcademico programa3 = new ProgramaAcademico(3, "Economia", 18, 0.10F);
+            // ProgramaAcademico programa4 = new ProgramaAcademico(4, "Comuniacion social", 18, 0.05F);
+            // ProgramaAcademico programa5 = new ProgramaAcademico(5, "Administracion de empresas", 20, 0.15F);
+            // Universidad antioquia = new Universidad("universidad de antioquia", "calle88");
+            // antioquia.Programas.Add(programa1);
+            // antioquia.Programas.Add(programa2);
+            // antioquia.Programas.Add(programa3);
+            // antioquia.Programas.Add(programa4);
+            // antioquia.Programas.Add(programa5);
+            // bool continuar = true;
+            // while (continuar)
+            // {
+            //     Console.WriteLine("MENÚ DE UNIVERSIDAD \n1. Consultar informacion\n2. Matricular\n3. Salir");
+            //     int opcion = int.Parse(Console.ReadLine());
 
-            }
+            //     switch (opcion)
+            //     {
+
+            //         case 1:
+            //             antioquia.MostrarInfo();
+            //             break;
+            //         case 2:
+            //             Console.WriteLine("Selecciona el id del programa que deseas matricularte");
+            //             foreach (var programa in antioquia.Programas)
+            //             {
+            //                 programa.MostrarInfo();
+            //             }
+            //             int programaMatricula = int.Parse(Console.ReadLine());
+            //             antioquia.Matricular(estudiante, programaMatricula);
+            //             break;
+            //         case 3:
+            //             Console.WriteLine("Saliendo del programa");
+            //             continuar = false;
+            //             break;
+
+            //         default:
+            //             Console.WriteLine("Opcion no validad");
+            //             break;
+
+
+            //     }
+
+            // }
+
+
+            // .La empresa de tecnología “COMPUTRONIC”, es una empresa líder en venta y
+            // distribución de equipos tecnológicos en la ciudad de Bogotá y cuenta en su única sede
+            // con un N cantidad de empleados quienes realizanN ventas durante el día. La empresa
+            // requiere identificar cuántas de las ventas fueron menores o iguales a $300.000,
+            // cuántas ventas fueron mayores a $
+            // 300.000 y menores a $800.000 y cuántas fueron mayores o iguales a
+            // $800.000 por cada empleado.
+            // También se necesita conocer monto total por la venta realizada por empleado y las
+            // bonificaciones a pagar según la venta realizada. Para el pago de la bonificación es
+            // necesario tener en cuenta la siguiente tabla:
+            // Venta Realizada
+            // % Pago
+            // Bonificación
+            // Ventas superiores o iguales a $400.000 3%
+            // Ventas entre $400.001 a $800.000 5%
+            // Ventas superiores a $800.000 10%
+            // Al finalizar el día, se debe calcular el valor a pagar por empleado, especificando: pago
+            // básico y el valor de la bonificación recibida. Tenga en cuenta que el pago básico para
+            // todos los empleados es de $500.000
+            // Desarrolle una solución básica de programación que le permita a la empresa
+            // COMPUTRONIC conocer toda la información que es de su interés. Los valores para
+            // ingresar deben ser números positivos.
+
+
+
+
+
+
+
         }
     }
 }

@@ -4,6 +4,7 @@
 // - Si OtherClass está en otro namespace, ajusta el using.
 
 using System;
+using ConsoleApp;
 
 
 namespace MiProyecto.App
@@ -17,46 +18,94 @@ namespace MiProyecto.App
             // Llamada a un método estático definido en otro archivo del mismo proyecto
             // Actividad es una clase static/internal en el namespace Ejercicios,
             // por lo que podemos llamar directamente a su método estático.
-            Prestamo.MostrarPrestamo();
-            Salario.MostrarSalario();
-            Objetos.CrearPersona();
+            // Prestamo.MostrarPrestamo();
+            // Salario.MostrarSalario();
+            // Objetos.CrearPersona();
 
 
 
 
-            // Crear la clase "Libro" tiene los atributos "Titulo", "Autor", "Editorial" y "AnioPublicacion",
-            // que se definen en el constructor de la clase. La clase "Biblioteca" contiene una lista de
-            // objetos "Libro", que se pueden agregar mediante el método "AgregarLibro" y listar mediante
-            // el método "ListarLibros". En el método, un método para buscar el libro por su nombre.
-            // "Main", se muestra un menú de opciones.
+            // // Crear la clase "Libro" tiene los atributos "Titulo", "Autor", "Editorial" y "AnioPublicacion",
+            // // que se definen en el constructor de la clase. La clase "Biblioteca" contiene una lista de
+            // // objetos "Libro", que se pueden agregar mediante el método "AgregarLibro" y listar mediante
+            // // el método "ListarLibros". En el método, un método para buscar el libro por su nombre.
+            // // "Main", se muestra un menú de opciones.
 
-            Biblioteca biblioteca = new Biblioteca();
-            while (true)
+            // Biblioteca biblioteca = new Biblioteca();
+            // bool continuar = true;
+            // while (continuar)
+            // {
+
+            //     Console.WriteLine("\n MENÚ DE BIBLIOTECA ");
+            //     Console.WriteLine("1. Agregar libro");
+            //     Console.WriteLine("2. Listar libros");
+            //     Console.WriteLine("3. Salir");
+            //     Console.Write("Elige una opción: ");
+
+            //     int opcion = int.Parse(Console.ReadLine());
+
+            //     switch (opcion)
+            //     {
+
+            //         case 1:
+            //             biblioteca.AgregarLibro();
+            //             break;
+            //         case 2:
+            //             biblioteca.ListarLibros();
+            //             break;
+            //         case 3:
+            //             Console.WriteLine("Saliendo del programa");
+            //             continuar = false
+            //             break;
+
+            //         default:
+            //             Console.WriteLine("OPcion no validad");
+            //             break;
+
+
+            //     }
+
+            // }
+            Estudiante estudiante = new Estudiante("alvarez mocholo", 19);
+            ProgramaAcademico programa1 = new ProgramaAcademico(1, "Ingenieria de sistemas", 20, 0.18F);
+            ProgramaAcademico programa2 = new ProgramaAcademico(2, "Psicologia", 16, 0.12F);
+            ProgramaAcademico programa3 = new ProgramaAcademico(3, "Economia", 18, 0.10F);
+            ProgramaAcademico programa4 = new ProgramaAcademico(4, "Comuniacion social", 18, 0.05F);
+            ProgramaAcademico programa5 = new ProgramaAcademico(5, "Administracion de empresas", 20, 0.15F);
+            Universidad antioquia = new Universidad("universidad de antioquia", "calle88");
+            antioquia.Programas.Add(programa1);
+            antioquia.Programas.Add(programa2);
+            antioquia.Programas.Add(programa3);
+            antioquia.Programas.Add(programa4);
+            antioquia.Programas.Add(programa5);
+            bool continuar = true;
+            while (continuar)
             {
-
-                Console.WriteLine("\n MENÚ DE BIBLIOTECA ");
-                Console.WriteLine("1. Agregar libro");
-                Console.WriteLine("2. Listar libros");
-                Console.WriteLine("3. Salir");
-                Console.Write("Elige una opción: ");
-
+                Console.WriteLine("MENÚ DE UNIVERSIDAD \n1. Consultar informacion\n2. Matricular\n3. Salir");
                 int opcion = int.Parse(Console.ReadLine());
 
                 switch (opcion)
                 {
 
                     case 1:
-                        biblioteca.AgregarLibro();
+                        antioquia.MostrarInfo();
                         break;
                     case 2:
-                        biblioteca.ListarLibros();
+                        Console.WriteLine("Selecciona el id del programa que deseas matricularte");
+                        foreach (var programa in antioquia.Programas)
+                        {
+                            programa.MostrarInfo();
+                        }
+                        int programaMatricula = int.Parse(Console.ReadLine());
+                        antioquia.Matricular(estudiante, programaMatricula);
                         break;
                     case 3:
                         Console.WriteLine("Saliendo del programa");
+                        continuar = false;
                         break;
 
                     default:
-                        Console.WriteLine("OPcion no validad");
+                        Console.WriteLine("Opcion no validad");
                         break;
 
 

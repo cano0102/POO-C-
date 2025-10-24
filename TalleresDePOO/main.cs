@@ -139,7 +139,11 @@ namespace MiProyecto.App
             // todos los empleados es de $500.000
             // Desarrolle una solución básica de programación que le permita a la empresa
             // COMPUTRONIC conocer toda la información que es de su interés. Los valores para
-            // ingresar deben ser números positivos.
+            // ingresar deben ser números positivos. 
+
+
+
+            
 
 
 

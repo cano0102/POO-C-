@@ -118,7 +118,13 @@ namespace MiProyecto.App
             // }
 
 
-            // .La empresa de tecnología “COMPUTRONIC”, es una empresa líder en venta y
+
+
+
+
+
+            //    Ejercicio 6
+            //.La empresa de tecnología “COMPUTRONIC”, es una empresa líder en venta y
             // distribución de equipos tecnológicos en la ciudad de Bogotá y cuenta en su única sede
             // con un N cantidad de empleados quienes realizanN ventas durante el día. La empresa
             // requiere identificar cuántas de las ventas fueron menores o iguales a $300.000,
@@ -143,8 +149,38 @@ namespace MiProyecto.App
 
 
 
-            
+            // Ejercicio 9
 
+
+            //Ejercicio 9
+            Console.WriteLine("ingresa la capacidad del camion (Litros)");
+            float capacidadCamion = float.Parse(Console.ReadLine());
+            float capacidad = 0;
+            int numeroSaco = 1;
+            bool continuar = true;
+            while (continuar)
+            {
+
+               if (capacidadCamion < 3000)
+               {
+                    Console.WriteLine("No se pueden agregar mas sacos, ningun saco puede cumplir la capacidad minima ");
+                   continuar = false;
+               }
+                Console.WriteLine($"ingresa la capacidad del saco #{numeroSaco} (Litros)");
+               float saco = float.Parse(Console.ReadLine());
+                
+               if ((capacidad + saco) > capacidadCamion)
+               {
+                    Console.WriteLine("este saco excede el limite del camion");
+                   continuar = false;
+               }
+               else
+               {
+                   capacidad += saco;
+               }
+                
+            }
+            Console.WriteLine("no puedes agregar mas sacos, despache el camion ");
 
 
 

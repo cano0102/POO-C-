@@ -9,9 +9,7 @@ namespace MiProyecto.App
         {
             Console.WriteLine("Ingrese el monto del prestamo");
             float monto = float.Parse(Console.ReadLine());
-
             float interesAnual = monto * 0.05f;
-
             float interesTrimestre = interesAnual / 4;
             float interesMensual = interesAnual / 12;
             float totalPagar = monto + (interesAnual * 5);
